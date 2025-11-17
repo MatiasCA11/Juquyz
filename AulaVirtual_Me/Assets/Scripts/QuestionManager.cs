@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Para manejar textos en UI
+using UnityEngine.SceneManagement;
 using TMPro; // Importar TextMeshPro
 using System.Linq; // Para funciones como OrderBy
 
@@ -34,19 +35,23 @@ public class QuestionManager : MonoBehaviour
     {
         // Crear preguntas y respuestas
         questions.Add(new Question("¿Cuántos éxodos tuvo Jujuy?", new[] { "4", "7", "1" }, 2));
+        questions.Add(new Question("¿En que fecha la provincia de Jujuy declaró su autonomia política?", new[] { "18 de Noviembre", "7 de Mayo", "1 de Julio" }, 0));
         questions.Add(new Question("¿Cuantos departamentos posee Jujuy?", new[] { "19", "12", "16" }, 2));
         questions.Add(new Question("¿Quién es el gobernador actual de la provincia?", new[] { "Sadir", "Morales", "Camilo" }, 0));
         questions.Add(new Question("¿Con que otro nombre es conocido el 'Dia Grande de Jujuy'?", new[] { "Batalla de los Gauchos", "Gran Jujuy", "Batalla de León" }, 2));
         questions.Add(new Question("¿Cuál es la capital de Jujuy?", new[] { "Tilcara", "San Salvador", "Perico" }, 1));
-        questions.Add(new Question("¿En qué año se realizó el Primer Éxodo Jujeño?", new[] { "1810", "1812", "1816" }, 1));
+        questions.Add(new Question("¿En qué año se realizó el Éxodo Jujeño?", new[] { "1810", "1812", "1816" }, 1));
         questions.Add(new Question("¿Qué famosa quebrada es Patrimonio de la Humanidad?", new[] { "Humahuaca", "Calilegua", "Tilcara" }, 0));
-        questions.Add(new Question("¿Cuál es el plato típico más conocido de Jujuy?", new[] { "Locro", "Humita", "Tamales" }, 1));
+        questions.Add(new Question("¿Cuál es el plato típico elaborado con choclo, queso y envuelto en chala?", new[] { "Locro", "Humita", "Tamales" }, 1));
         questions.Add(new Question("¿Qué cerro en Jujuy es conocido por ser un...?", new[] { "Cerro Amarillo", "Cerro de los Siete Colores", "Cerro Blanco" }, 1));
         questions.Add(new Question("¿Qué carnaval tradicional es famoso en Jujuy?", new[] { "El Carnaval de la Quebrada", "El Carnaval de las flores", "Carnaval Andino" }, 0));
         questions.Add(new Question("¿Cuál es el nombre al famoso monumento de Humahuaca?", new[] { "Heroes de la Independencia", "Monumento al Indio", "Monumento al Carnaval" }, 0));
         questions.Add(new Question("¿Cuál es el animal más emblemático de la provincia?", new[] { "Puma", "Tucán", "Yaguareté" }, 2));
         questions.Add(new Question("¿Cuál de las siguientes leyendas pertenecen a Jujuy?", new[] { "El Familiar", "El Coquena", "Todas las anteriores" }, 2));
-        questions.Add(new Question("¿Cuál es la ultima edición realizada de la FNE?", new[] { "69", "73", "70" }, 1));
+        questions.Add(new Question("¿Cuál es el nombre de la antigua fortaleza ubicada en la Quebrada?", new[] { "El Cabildo", "El Pucará de Tilcara", "Casabindo" }, 1));
+        questions.Add(new Question("¿Qué festividad religiosa de gran arraigo en Jujuy consiste en venerar la tierra como madre?", new[] { "Ceremonia de la madre tierra", "Carnaval", "Ceremonia de la Pachamama" }, 2));
+        questions.Add(new Question("¿Qué región geográfica de Jujuy alberga a especies como vicuñas, guanacos y llamas?", new[] { "Valle", "Quebrada", "Puna" }, 2));
+        questions.Add(new Question("¿Qué personaje mítico, es travieso/a y que se dice que se lleva objetos, hace bromas y a veces asusta a los viajeros", new[] { "El Duende", "La Mulanima", "La Viuda" }, 0));
 
 
         // Barajar preguntas al inicio
@@ -150,6 +155,7 @@ public class QuestionManager : MonoBehaviour
         if(timeRestant < 0f)
         {
             Debug.Log("PERDISTEEE!!");
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -162,7 +168,8 @@ public class QuestionManager : MonoBehaviour
 
             if (scoreIndex == scoreMax)
             {
-            Debug.Log("GANASTEEEEEE!!");
+                Debug.Log("GANASTEEEEEE!!");
+                SceneManager.LoadScene(2);
             }
         }
     }
