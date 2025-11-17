@@ -835,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6410794851428298570, guid: 6a5482370608d0d459c9d1bcb1c13027, type: 3}
       propertyPath: m_TagString
-      value: Jugar
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 6410794851428298573, guid: 6a5482370608d0d459c9d1bcb1c13027, type: 3}
       propertyPath: floatAmplitude

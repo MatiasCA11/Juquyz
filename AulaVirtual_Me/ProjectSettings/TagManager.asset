@@ -8,6 +8,7 @@ TagManager:
   - Answer
   - Jugar
   - Salir
+  - MainMenu
   layers:
   - Default
   - TransparentFX

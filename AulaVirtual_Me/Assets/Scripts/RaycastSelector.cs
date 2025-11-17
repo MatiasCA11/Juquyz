@@ -66,7 +66,22 @@ public class RaycastSelector : MonoBehaviour
                     SceneManager.LoadScene("SampleScene");
                     ResetGaze(); // Reiniciar si el objeto no es válido
                 }
-                
+            }
+            else if(hit.transform.CompareTag("MainMenu"))
+            {
+                if (targetObject != hit.transform)
+                {
+                    // Cambiar el objetivo y reiniciar el temporizador
+                    gazeTimer = 0f;
+                    targetObject = hit.transform;
+                }
+                gazeTimer += Time.deltaTime;
+
+                if(gazeTimer >= gazeTime)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                    ResetGaze(); // Reiniciar si el objeto no es válido
+                }
             }
         }
         else
