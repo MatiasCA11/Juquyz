@@ -7795,7 +7795,7 @@ MonoBehaviour:
   timeRestant: 30
   score: {fileID: 1704377286}
   scoreIndex: 0
-  scoreMax: 1
+  scoreMax: 5
   audioSource: {fileID: 1997406315}
   clipOptions:
   - {fileID: 8300000, guid: 48dcfb60e62784f468ffcc03dfe1261a, type: 3}
