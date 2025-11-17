@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Selectable
   - Answer
-  - Jugar
-  - Salir
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class RaycastSelector : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class RaycastSelector : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            Debug.Log("Raycast golpeó: " + hit.transform.name); // Verificar qué objeto detectó
+            //Debug.Log("Raycast golpeó: " + hit.transform.name); // Verificar qué objeto detectó
 
             // Verificar si es un objeto de respuesta
             if (hit.transform.CompareTag("Answer"))
@@ -51,22 +50,9 @@ public class RaycastSelector : MonoBehaviour
                     ResetGaze();
                 }
             }
-            else if(hit.transform.CompareTag("Jugar"))
+            else
             {
-                if (targetObject != hit.transform)
-                {
-                    // Cambiar el objetivo y reiniciar el temporizador
-                    gazeTimer = 0f;
-                    targetObject = hit.transform;
-                }
-                gazeTimer += Time.deltaTime;
-
-                if(gazeTimer >= gazeTime)
-                {
-                    SceneManager.LoadScene("SampleScene");
-                    ResetGaze(); // Reiniciar si el objeto no es válido
-                }
-                
+                ResetGaze(); // Reiniciar si el objeto no es válido
             }
         }
         else
