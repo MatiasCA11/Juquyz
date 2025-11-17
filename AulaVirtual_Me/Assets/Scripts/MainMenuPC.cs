@@ -11,6 +11,8 @@ public class MainMenuPC : MonoBehaviour
     {
         audioSource.Play();
     }
+
+
     public void EmpezarNivel(string NombreNivel)
     {
         SceneManager.LoadScene(NombreNivel);
@@ -20,5 +22,11 @@ public class MainMenuPC : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("aquí se cierra el juego");
+    }
+
+    void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
