@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenuPC.unity
-    guid: 07466ec4d553bf04d9b23ecc39cc8add
-  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/VictoryPC.unity
-    guid: a3cef14edf8f680448841fce92a908fe
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9f13cce38948d0245ad7383324acedfb
   - enabled: 1
-    path: Assets/Scenes/DefeatPC.unity
-    guid: 7e864b2456865bf4eb420c6b9c9603fb
+    path: Assets/Scenes/Win.unity
+    guid: dfd1651c1bbba5240abc7d8965c5f590
+  - enabled: 1
+    path: Assets/Scenes/Retry.unity
+    guid: d63169b520a3590499f008711d655a90
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9b0ad81a93831614cad39736e2a96cb3, type: 2}

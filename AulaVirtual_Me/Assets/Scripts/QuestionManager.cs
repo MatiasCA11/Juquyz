@@ -164,7 +164,7 @@ public class QuestionManager : MonoBehaviour
         if(score != null)
         {
             scoreIndex++;
-            score.GetComponentInChildren<TextMeshPro>().text = $"Score for  WIN: {scoreIndex.ToString()} / {scoreMax.ToString()}";
+            score.GetComponentInChildren<TextMeshPro>().text = $"Score \n for \n WIN: {scoreIndex.ToString()} / {scoreMax.ToString()}";
 
             if (scoreIndex == scoreMax)
             {
